@@ -7,7 +7,7 @@ public class ReverseString {
     }
 
     public static String reverse(String original) {
-        String reversed = "";
+        String reversed;
         StringBuilder stringBuilder = new StringBuilder();
 
         for (int i = original.length() - 1; i >= 0; i--) {
