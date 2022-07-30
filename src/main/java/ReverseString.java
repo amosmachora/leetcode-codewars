@@ -2,7 +2,7 @@ public class ReverseString {
 
 
     public static void main(String[] args) {
-        String original = "Cristiano Ronaldo";
+        String original = "Jude Bellingham";
         System.out.println(reverse(original));
     }
 
