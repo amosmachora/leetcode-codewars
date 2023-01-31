@@ -1,9 +1,9 @@
-import java.time.Instant;
-
 public class QuestionNine {
     public static void main(String[] args) {
-        Instant instant = Instant.now();
-        System.out.print(instant);
+        long start = System.nanoTime();
+        reverseStringRecursively(getString(100));
+        long end = System.nanoTime();
+        System.out.print((end - start) / 1e9);
     }
 
     //Non-recursive method
@@ -16,11 +16,19 @@ public class QuestionNine {
     }
 
     // recursive java method
-    public String reverseStringRecursively(String s) {
+    public static String reverseStringRecursively(String s) {
         if (s.length() == 0) {
             return s;
         }
         return reverseString(s.substring(1)) + s.charAt(0);
+    }
+
+    public static String getString(int n) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < n; i++) {
+            stringBuilder.append("x");
+        }
+        return stringBuilder.toString();
     }
 
 }
